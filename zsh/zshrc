@@ -1,0 +1,81 @@
+source ~/.zsh/prompt
+source ~/.zsh/globalalias
+source ~/.zsh/localalias
+
+export EDITOR=vim
+export PATH=/Users/soleblaze/bin:$PATH
+export BROWSER=safari
+
+limit core 0
+umask 022
+setopt autolist automenu nobeep
+
+#bind keys
+bindkey "\e[1~" beginning-of-line # Home
+bindkey "\e[4~" end-of-line # End
+bindkey "\e[5~" beginning-of-history # PageUp
+bindkey "\e[6~" end-of-history # PageDown
+bindkey "\e[2~" quoted-insert # Ins
+bindkey "\e[3~" delete-char # Del
+bindkey "\e[5C" forward-word
+bindkey "\eOc" emacs-forward-word
+bindkey "\e[5D" backward-word
+bindkey "\eOd" emacs-backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "\e[Z" reverse-menu-complete # Shift+n
+
+# useful for path editing — backward-delete-word, but with / as additional delimiter
+backward-delete-to-slash () {
+  local WORDCHARS=${WORDCHARS//\//}
+  zle .backward-delete-word
+}
+zle -N backward-delete-to-slash
+
+### ZSH Specific ###
+
+# Zsh settings for history
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTSIZE=25000
+export HISTFILE=~/.zsh/.history
+export SAVEHIST=25000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+
+# Enable smart autocompletion
+autoload -U compinit && compinit
+setopt complete_in_word
+
+# Enable menu selection when hitting tab twice
+zstyle ':completion:*' menu select
+
+# Set pid completion for kill
+zstyle ':completion:*:*:kill:*:processes' command 'ps --forest -e -o pid,user,tty,cmd'
+
+#Set Warning message when nothing can be autocompleted
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+
+# Enable the use of auto completion cache to speed up some functions, such as pacman
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# Allow 1 mistake in auto completion (fuzzy)
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+
+# Don't auto complete parent directory when using cd ../
+zstyle ':completion:*:cd:*' ignore-parents parent pwd
+
+# Enable extended globs (i.e. **/)
+setopt extended_glob
+
+# Enable auto correct for commands
+setopt correct
+set -o noclobber

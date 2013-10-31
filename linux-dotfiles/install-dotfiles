@@ -1,0 +1,20 @@
+#!/bin/bash
+
+dotfiles=/media/psf/dotfiles
+
+ln -s $dotfiles/vimrc ~/.vimrc
+cp -r $dotfiles/vim ~/.vim
+mkdir ~/.vim/backup
+mkdir ~/.vim/tmp
+
+ln -s $dotfiles/screenrc ~/.screenrc
+ln -s $dotfiles/tmux.conf ~/.tmux.conf
+
+ln -s $dotfiles/zshrc ~/.zshrc
+mkdir ~/.zsh
+ln -s $dotfiles/zsh/globalalias ~/.zsh/globalalias
+ln -s $dotfiles/zsh/prompt ~/.zsh/prompt
+touch ~/.zsh/localalias
+
+
+cp $dotfiles/gdbinit ~/.gdbinit

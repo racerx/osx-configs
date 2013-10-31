@@ -1,0 +1,42 @@
+#!/bin/zsh
+
+# Various aliases
+alias free="free -m"
+alias grep="grep --color -i"
+alias ls="ls -CGFh"
+alias sl="ls -CGFh"
+alias ll="ls -l"
+alias sz="source ~/.zshrc"
+
+# load rarely used zsh functions
+alias loadzftp="autoload -U zfinit && zfinit"
+alias loadtcpopen="autoload -U tcp_open && tcp_open"
+
+# global aliases
+alias -g ...="../.."
+alias -g ....="../../.."
+alias -g .....="../../../.."
+
+# git aliases
+alias gitp="git push -u origin master"
+alias gita="git add"
+alias gitc="git commit"
+alias gitac="git commit -a"
+alias gitr="git rm"
+alias getrev="git revert"
+alias gitmv="git mv"
+alias gitb="git branch"
+alias gitm="git merge"
+
+# vi aliases
+alias vi=vim
+alias vila="vi ~/.zsh/localalias; sz"
+alias vigl="vi ~/.zsh/globalalias; sz"
+alias vizsh="vi ~/.zshrc; sz"
+alias viol='vim -c "source ~/.vim/outline.vimrc" $*'
+
+# Find shortcuts
+function findi() {
+		find . -iname "*${1}*"
+	}
+

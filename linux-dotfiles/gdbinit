@@ -1,0 +1,2 @@
+set disassembly-flavor intel
+source /media/psf/bin/peda/peda.py

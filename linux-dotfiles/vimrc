@@ -1,0 +1,25 @@
+set nocompatible
+set autoindent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set showmatch
+set vb t_vb=
+set incsearch
+set ruler
+syntax on
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
+set iskeyword+=_,$,@,%,#
+set number
+set numberwidth=5
+set ignorecase
+set spelllang=en
+set spellsuggest=5
+set t_Co=16                                                
+call pathogen#infect()                                     
+set background=dark " dark | light "                       
+colorscheme slate
+filetype plugin on
