@@ -22,9 +22,9 @@ function precmd {
 
     # VCS
     if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-        zstyle ':vcs_info:*' formats '%F{blue}(%F{yellow}%b%c%u%F{blue})'
+        zstyle ':vcs_info:*' formats '%F{blue}(%F{yellow}%b%c%u%F{blue})'─
     else
-        zstyle ':vcs_info:*' formats '%F{blue}(%F{yellow}%b%c%u%F{red}●%F{blue})'
+        zstyle ':vcs_info:*' formats '%F{blue}(%F{yellow}%b%c%u%F{red}●%F{blue})'─
     fi
     vcs_info
 
