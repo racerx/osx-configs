@@ -34,7 +34,7 @@ function precmd {
 
 setopt extended_glob
 preexec () {
-    if [[ "$TERM" == "screen" ]]; then
+    if [[ "$TERM" == "screen-256color" ]]; then
 	local CMD=${1[(wr)^(*=*|sudo|-*)]}
 	echo -n "\ek$CMD\e\\"
     fi
@@ -85,7 +85,7 @@ setprompt () {
 	xterm*)
 	    PR_TITLEBAR=$'%{\e]0;%(!.-=*[ROOT]*=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\a%}'
 	    ;;
-	screen)
+	screen-256color)
 	#    PR_TITLEBAR=$'%{\e_screen \005 (\005t) | %(!.-=[ROOT]=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\e\\%}'
 	 PR_TITLEBAR=$'%{\e_ | %(!.-=[ROOT]=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\e\\%}'
 
@@ -98,7 +98,7 @@ setprompt () {
 
     ###
     # Decide whether to set a screen title
-    if [[ "$TERM" == "screen" ]]; then
+    if [[ "$TERM" == "screen-256color" ]]; then
 	PR_STITLE=$'%{\ekzsh\e\\%}'
     else
 	PR_STITLE=''
