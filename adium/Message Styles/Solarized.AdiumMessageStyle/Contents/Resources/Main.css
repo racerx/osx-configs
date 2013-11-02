@@ -1,0 +1,162 @@
+body {
+    font-weight: 300;
+    margin: 2px;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #657b83;
+}
+
+#Chat {
+
+}
+
+ /******* SOME TOPIC STUFF *******/
+#topic, .history {
+    font-size: 90%;
+    padding: 6px;
+}
+
+#wrap {
+    position: fixed;
+    top: 0px !important;
+    right: 0px;
+    left: 0px;
+    padding: 4px;
+    padding-left: 21px;
+    z-index: 99;
+    -webkit-background-size: auto auto;
+    -webkit-transition: opacity .2s linear;
+}
+
+#topic[title=""]:not(:hover) #wrap {
+    opacity: 0;
+}
+
+#topicEdit {
+    min-height: 1em;
+    display: block;
+}
+
+.t-toggle {
+    position: fixed;
+    top: 2px;
+    left: 3px;
+    padding: 2px;
+    z-index: 10;
+    cursor: default;
+    font-size: 10px !important;
+    font-family: AppleGothic;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#hide:before { content: "\25BD"; }
+#hide:active:before { content: "\25BC"; }
+#show:before { content: "\25B3"; }
+#show:active:before { content: "\25B2"; }
+
+ /******* END TOPIC STUFF *******/
+
+.mention {
+    color: rgba(131,148,150,1);
+}
+
+#insert,
+.message,
+.status,
+.event {
+    clear: both;
+    padding: 2px 4px;
+}
+
+.event {
+    font-size: .9em;
+    font-style: italic;
+}
+
+.sender, .themessage, .time {
+    margin: 0;
+    padding: 3px;
+}
+
+.sender {
+    white-space: nowrap;
+    padding-right: 0;
+}
+
+/* make my username less noticeable */
+.outgoing .sender {
+    color: #93a1a1 !important;
+}
+
+.message:not(.event) .sender:after,
+.message:not(.action) .sender:after {
+    content: ":";
+}
+
+.event .sender:after,
+.status .sender:after {
+
+}
+
+.themessage {
+    padding-left: 0;
+}
+
+.time {
+    font-weight: 200;
+    text-align: right;
+    white-space: nowrap;
+    float: right;
+    margin: -3px 3px auto 10px;
+}
+
+.action,
+.status,
+.event {
+    font-style: italic;
+    opacity: .9;
+}
+
+.action .sender:before {
+    content: "• ";
+    white-space: nowrap;
+    font-style: italic;
+}
+
+.action .message:after {
+    content: " •";
+    white-space: nowrap;
+    font-style: italic;
+}
+
+/* adium adds asterisks to action message bodies and i don't care for it so i'm removing them */
+.actionMessageBody:after,
+.actionMessageBody:before,
+.history .actionMessageBody:after,
+.history .actionMessageBody:before {
+    content: "";
+}
+
+.mention {
+    padding-bottom: 4px
+}
+
+.history + :not(.history) {
+    padding-top: 6px;
+}
+
+.history.mention {
+    border-top: none;
+    border-bottom: none;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.firstFocus {
+    border-top-width: 1px;
+    border-top-style: dashed;
+    margin-top: 2px;
+}
