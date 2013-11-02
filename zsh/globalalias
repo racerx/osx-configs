@@ -27,11 +27,12 @@ alias getrev="git revert"
 alias gitmv="git mv"
 alias gitb="git branch"
 alias gitm="git merge"
+alias gits="git status -s"
 
 # vi aliases
 alias vi=vim
 alias vila="vi ~/.zsh/localalias; sz"
-alias vigl="vi ~/.zsh/globalalias; sz"
+alias viga="vi ~/.zsh/globalalias; sz"
 alias vizsh="vi ~/.zshrc; sz"
 alias viol='vim -c "source ~/.vim/outline.vimrc" $*'
 
