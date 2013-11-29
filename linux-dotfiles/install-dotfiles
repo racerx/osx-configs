@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles=/media/psf/dotfiles
+dotfiles=/media/psf/linux-dotfiles
 
 ln -s $dotfiles/vimrc ~/.vimrc
 cp -r $dotfiles/vim ~/.vim
