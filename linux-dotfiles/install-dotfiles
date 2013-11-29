@@ -4,6 +4,7 @@ dotfiles=/media/psf/linux-dotfiles
 
 ln -s $dotfiles/vimrc ~/.vimrc
 cp -r $dotfiles/vim ~/.vim
+chmod 755 ~/.vim
 mkdir ~/.vim/backup
 mkdir ~/.vim/tmp
 
