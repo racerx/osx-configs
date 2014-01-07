@@ -1,0 +1,103 @@
+[DISASM]
+626262	 //Instruction
+a0a091	 //Directive
+756e56	 //Macro name
+756e56	 //Register name
+756e56	 //Other keywords
+959381	 //Dummy data name
+d28b26	 //Dummy code name
+d28a04	 //Dummy unexplored name
+d28a04	 //Hidden name
+97a10f	 //Library function name
+d28a04	 //Local variable name
+00ff00	 //Regular data name
+d28a04	 //Regular code name
+164acf	 //Regular unexplored name
+97a10f	 //Demangled name
+c47069	 //Segment name
+3032e1	 //Imported name
+009784	 //Suspicious constant
+3032e1	 //Char in instruction
+c0c0c0	 //String in instruction
+d28a04	 //Number in instruction
+d28a04	 //Char in data
+d28b26	 //String in data
+d28a04	 //Number in data
+0088b7	 //Code reference
+164acf	 //Data reference
+d28b26	 //Code reference to tail
+d28a04	 //Data reference to tail
+813ad0	 //Automatic comment
+009784	 //Regular comment
+d28a04	 //Repeatable comment
+d28a04	 //Extra line
+959381	 //Collapsed line
+97a10f	 //Line prefix: library function
+8136d6	 //Line prefix: regular function
+009784	 //Line prefix: instruction
+d28b26	 //Line prefix: data
+d28a04	 //Line prefix: unexplored
+d28a04	 //Line prefix: externs
+d28a04	 //Line prefix: current item
+000000	 //Line prefix: current line
+392f00	 //Punctuation
+d3e8ef	 //Opcode bytes
+97a10f	 //Manual operand
+d28b26	 //Error
+756e56	 //Default color
+756e56	 //Selected
+0088b7	 //Library function
+848270	 //Regular function
+000000	 //Single instruction
+a0a091	 //Data bytes
+000000	 //Unexplored byte
+[NAVBAR]
+97a10f	 //Library function
+d28a04	 //Regular function
+164acf	 //Instruction
+a0a091	 //Data item
+0088b7	 //Unexplored
+8136d6	 //External symbol
+3032e1	 //Errors
+443901	 //Gaps
+e3f6fd	 //Cursor
+009784	 //Address
+[DEBUG]
+3a3000	 //Current IP
+d3e8ef	 //Current IP (Enabled)
+009784	 //Current IP (Disabled)
+443901	 //Current IP (Unavailible)
+3032e1	 //Address
+009784	 //Address (Enabled)
+0088b7	 //Address (Disabled)
+164acf	 //Address (Unavailible)
+959381	 //Registers
+d28a04	 //Registers (Changed)
+8136d6	 //Registers (Edited)
+[ARROW]
+756e56	 //Jump in current function
+3032e1	 //Jump external to function
+443901	 //Jump under the cursor
+97a10f	 //Jump target
+c47069	 //Register target
+[GRAPH]
+443901	 //Top color
+392f00	 //Bottom color
+392f00	 //Normal title
+443901	 //Selected title
+a0a091	 //Current title
+827b63	 //Group frame
+443901	 //Node shadow
+d28a04	 //Highlight color 1
+97a10f	 //Highlight color 2
+3032e1	 //Foreign node
+d28a04	 //Normal edge
+009784	 //Yes edge
+3032e1	 //No edge
+c47069	 //Highlighted edge
+0088b7	 //Current edge
+[MISC]
+959381	 //Message text
+392f00	 //Message background
+3032e1	 //Patched bytes
+164acf	 //Unsaved changes
