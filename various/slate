@@ -16,7 +16,7 @@ config windowHintsSpread true
 
 # Misc aliases
 alias browser 'Safari'
-alias editor 'Sublime Text 2'
+alias editor 'Sublime Text'
 alias hyper ctrl;shift;alt;cmd
 
 
