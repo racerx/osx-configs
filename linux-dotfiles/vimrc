@@ -19,7 +19,6 @@ set ignorecase
 set spelllang=en
 set spellsuggest=5
 set t_Co=16                                                
-call pathogen#infect()                                     
 set background=dark " dark | light "                       
 colorscheme slate
 filetype plugin on
