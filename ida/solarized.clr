@@ -50,7 +50,7 @@ d28b26	 //Error
 848270	 //Regular function
 000000	 //Single instruction
 a0a091	 //Data bytes
-000000	 //Unexplored byte
+0088b7	 //Unexplored byte
 [NAVBAR]
 97a10f	 //Library function
 d28a04	 //Regular function
